@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Chart.js examples</title>
+    <!-- Include Chart.js library -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light " style="background-color: #ffffff;">
+        <a href="#" class="navbar-brand">
+            <style>
+                .navbar-brand {
+                    color: #ffffff; /* Change color to white */
+                    font-size: 24px; /* Adjust font size */
+                    font-style: italic
+                    /* Add any other styling properties you want */
+                }
+            </style>
+
+            <a href="#" class="navbar-brand">
+                GoDrive Rentals
+            </a>
+
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+
+            </div>
+
+
+            <div class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-item nav-link"></a>
+                    <b><a href="index.html" class="nav-item nav-link" style="color: black;">Home</a></b>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-item nav-link"></a>
+                    <b><a href="#" class="nav-item nav-link"></a></b>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-item nav-link"></a>
+                    <b><a href="book.html" class="nav-item nav-link" style="color: black;">Book Now</a></b>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-item nav-link"></a>
+                    <b><a href="#" class="nav-item nav-link"></a></b>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-item nav-link"></a>
+                    <b><a href="FinalChart.html" class="nav-item nav-link" style="color: black;">Final Chart</a></b>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-item nav-link"></a>
+                    <b><a href="#" class="nav-item nav-link"></a></b>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-item nav-link"></a>
+                    <b><a href="FinalMaps.html" class="nav-item nav-link" style="color: black;">Final Maps</a></b>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-item nav-link"></a>
+                    <b><a href="#" class="nav-item nav-link"></a></b>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-item nav-link"></a>
+                    <b><a href="Register.html" class="nav-item nav-link" style="color: black;">Sign Up</a></b>
+                </li>
+
+            </div>
+        </div>
+    </nav>
+    <h2>Average Customer Ratings of Different Class of Cars in Florida State(Apr'23-Mar'24),(On scale of 10)</h2>
+
+    <!-- Corrected canvas ID -->
+    <canvas id="barchart1" width="300" height="110"></canvas>
+
+    <script>
+        new Chart(document.getElementById("barchart1"), {
+            type: 'bar',
+            data: {
+                labels: ["Miami", "Orlando", "Tampa", "Tallahasse", "Sarasota", "St.Petersburg"],
+                datasets: [
+                    {
+                        label: "SUV",
+                        backgroundColor: "#3cba9f",
+                        data: [9, 9.1, 8.9, 8.8, 7.6, 9.3]
+                    }, {
+                        label: "Sedan",
+                        backgroundColor: "#c45850",
+                        data: [8.6, 9.3, 9.1, 9.2, 9, 8.8]
+                    }, {
+                        label: "Mini",
+                        backgroundColor: "#e8c3b9",
+                        data: [7.8, 8.7, 9, 8.9, 8.5, 9.4]
+                    }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Average Customer Ratings of Different Class of Cars in Florida State (On a scale of 10)'
+                }
+            }
+        });
+    </script>
+</body>
+</html>
